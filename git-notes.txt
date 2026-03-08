@@ -80,7 +80,7 @@ Reason: -a automatically stages modified files (not new files).
 | Branch info           | See current branch                    | `git branch`                                       |
 | Delete empty files    | Find and remove empty files           | `find . -type f -empty -delete`                    |
 | Delete files in Git   | Remove files and record deletion      | `rm file` + `git commit`                           |
-| rename file           | git mv newlogs logs -{no staging required if doing directly byusing git}                   |
+| rename file           | git mv newlogs logs -{no staging required if doing directly byusing git}  [[else do manually by]] mv oldname.txt newname.txt -> git add newname.txt -> git rm oldname.txt |
 
 Core workflow you practiced
 Edit file
