@@ -59,7 +59,7 @@ git commit -m "message"
 git push
 git log --oneline
 
-GIT COMMANDS :
+GIT COMMANDS : 
 | Command                                            | Reason (Why we use it)                                         | Example Command                                    | Example Output                      |
 | -------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------- | ----------------------------------- |
 | `ls`                                               | Shows files and folders in the current directory               | `ls`                                               | `README.md file git_notes.txt logs` |
