@@ -1,0 +1,43 @@
+“A Version Control System records every change made to code so developers can collaborate safely and recover earlier versions when necessary.”
+
+environments :
+ production
+ pre prod
+ validation
+ staging
+ dev
+
+why devops use git : “DevOps engineers use Git to version control source code, collaborate with teams, and trigger automated CI/CD pipelines whenever code changes are pushed.”
+
+Then a pipeline starts running automatically:
+Developer writes code
+→ pushes code to Git repository
+→ CI pipeline builds the application
+→ automated tests run
+→ Docker image is created
+→ application is deployed to servers or cloud.
+
+A repository is a storage location where a project's code, files, and their version history are kept and managed.
+
+PR concept : 
+rca : root cause analysis
+
+Staging/index area - means after git add file and before git commit file
+how staging works in backend : 
+     git log(to check commit id) : previous saved logs
+     the staging area save the file to git repo by encoded format using commit id that commit id are stored in .git inside that objects having the latest id 
+        
+
+alias nagesh="mkdir" 
+->Nagesh newfile
+ for this we use bashrc.
+
+git status
+1. git init : initialize git to folder
+2. git add : to untracked to track file/folder
+3. git commit -m "new file created" : to save changes of file to git repo {-m for to having a proper control or to track easily}
+if author is not configed then :
+1. git config --global --edit 
+   edit name, mail
+   control 0 -> enter -> control x -> enter
+2. git commit --amend --reset-author 
