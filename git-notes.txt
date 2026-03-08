@@ -62,25 +62,29 @@ git commit -am "updating git_notes.txt"
 Reason: -a automatically stages modified files (not new files).
 
 
-| Topic                 | What You Learned                      | Key Command                                        |
-| --------------------- | ------------------------------------- | -------------------------------------------------- |
-| Repository files      | How to view files in a directory      | `ls`                                               |
-| Create files          | Create and write content to a file    | `echo "text" > file`                               |
-| Read file             | Display file content                  | `cat file`                                         |
-| Check repo status     | See modified, staged, and branch info | `git status`                                       |
-| Staging area          | Move changes to staging before commit | `git add file` / `git add .`                       |
-| Commit changes        | Save changes into Git history         | `git commit -m "message"`                          |
-| Push to GitHub        | Upload commits to remote repo         | `git push -u origin main`                             |
-| Pull from GitHub      | Download latest remote changes        | `git pull -u origin main`                             |
+| Topic                 | Key Command                                         |
+| --------------------- | --------------------------------------------------  |
+| Repository files      |  `ls`                                               |
+| Create files          |  `echo "text" > file`                               |
+| Read file             |  `cat file`                                         |
+| Check repo status     | See modified, staged, and branch info | `git status`|
+| Staging area          |  `git add file` / `git add .`                       |
+| Commit changes        |  `git commit -m "message"`                          |
+| Push to GitHub        |  `git push -u origin main`                             |
+| Pull from GitHub      |  `git pull -u origin main`                             |
 | Merge unrelated repos | Merge repos with different histories  | `git pull origin main --allow-unrelated-histories` |
-| View commit history   | See all commits in repo               | `git log`                                          |
-| Short commit history  | Compact commit view                   | `git log --oneline`                                |
-| File-specific history | See commits affecting one file        | `git log -- filename`                              |
-| Repository connection | Check GitHub repo URL                 | `git remote -v`                                    |
-| Branch info           | See current branch                    | `git branch`                                       |
-| Delete empty files    | Find and remove empty files           | `find . -type f -empty -delete`                    |
-| Delete files in Git   | Remove files and record deletion      | `rm file` + `git commit`                           |
-| rename file           | git mv newlogs logs -{no staging required if doing directly byusing git}  [[else do manually by]] mv oldname.txt newname.txt -> git add newname.txt -> git rm oldname.txt |
+| View commit history   |  `git log`                                          |
+| Short commit history  |  `git log --oneline`                                |
+| File-specific history |  `git log -- filename`                              |
+| Repository connection |  `git remote -v`                                    |
+| Branch info           |  `git branch`                                       |
+| Delete empty files    |  `find . -type f -empty -delete`                    |
+| Delete files in Git   |  `rm file` + `git commit`                           |
+| rename file           | 'git mv newlogs logs' => {no staging required if doing directly by using git} else manually =>> mv oldname.txt newname.txt -> git add newname.txt -> git rm oldname.txt |
+|create + switch branch | git checkout -b <branch name>                       |
+| Branch info           | git branch => * feature1 , main                     |
+
+
 
 Core workflow you practiced
 Edit file
