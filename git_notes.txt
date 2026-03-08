@@ -32,12 +32,35 @@ alias nagesh="mkdir"
 ->Nagesh newfile
  for this we use bashrc.
 
+Git workflow always: edit → add → commit → push
+Fix:
+git add git_notes.txt
+git commit -m "updating git_notes.txt"
+git push
+
+Reason:
+git add → moves file to staging
+git commit → records the change
+git push → sends commit to GitHub
+
+Faster shortcut (useful for single file edits)
+git commit -am "updating git_notes.txt"
+
+Reason: -a automatically stages modified files (not new files).
+
+COMMANDS :
 git status
 1. git init : initialize git to folder
 2. git add : to untracked to track file/folder
 3. git commit -m "new file created" : to save changes of file to git repo {-m for to having a proper control or to track easily}
+
 if author is not configed then :
 1. git config --global --edit 
    edit name, mail
    control 0 -> enter -> control x -> enter
 2. git commit --amend --reset-author 
+
+4. git push -u origin main :  to push code
+5. git pull origin main --allow-unrelated-histories : if existing repo have some files and in local project have updated files including new files also then we use this .
+
+
