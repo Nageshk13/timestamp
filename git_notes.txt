@@ -32,35 +32,51 @@ alias nagesh="mkdir"
 ->Nagesh newfile
  for this we use bashrc.
 
-Git workflow always: edit → add → commit → push
-Fix:
-git add git_notes.txt
-git commit -m "updating git_notes.txt"
-git push
 
-Reason:
-git add → moves file to staging
-git commit → records the change
-git push → sends commit to GitHub
+Git Workflow (Most Important) : Always remember this pipeline.
+Working Directory
+      ↓
+git add
+      ↓
+Staging Area
+      ↓
+git commit
+      ↓
+Local Repository
+      ↓
+git push
+      ↓
+GitHub
 
 Faster shortcut (useful for single file edits)
 git commit -am "updating git_notes.txt"
-
 Reason: -a automatically stages modified files (not new files).
 
-COMMANDS :
+Commands DevOps Engineers Use Daily
 git status
-1. git init : initialize git to folder
-2. git add : to untracked to track file/folder
-3. git commit -m "new file created" : to save changes of file to git repo {-m for to having a proper control or to track easily}
+git add .
+git commit -m "message"
+git push
+git log --oneline
 
-if author is not configed then :
-1. git config --global --edit 
-   edit name, mail
-   control 0 -> enter -> control x -> enter
-2. git commit --amend --reset-author 
-
-4. git push -u origin main :  to push code
-5. git pull origin main --allow-unrelated-histories : if existing repo have some files and in local project have updated files including new files also then we use this .
-
+GIT COMMANDS :
+| Command                                            | Reason (Why we use it)                                         | Example Command                                    | Example Output                      |
+| -------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------- | ----------------------------------- |
+| `ls`                                               | Shows files and folders in the current directory               | `ls`                                               | `README.md file git_notes.txt logs` |
+| `echo "text" > file`                               | Creates a file and writes text into it                         | `echo "hi nagesh" > file`                          | *(no output, file created)*         |
+| `cat file`                                         | Displays file content                                          | `cat file`                                         | `hi nagesh`                         |
+| `git status`                                       | Shows current repo state (modified, staged files, branch info) | `git status`                                       | `modified: git_notes.txt`           |
+| `git add file`                                     | Moves a specific file to staging area                          | `git add git_notes.txt`                            | *(no output)*                       |
+| `git add .`                                        | Adds all changed files to staging area                         | `git add .`                                        | *(no output)*                       |
+| `git commit -m "message"`                          | Saves staged changes in Git history                            | `git commit -m "added new file"`                   | `[main 4321416] added new file`     |
+| `git push origin main`                             | Uploads commits to GitHub                                      | `git push origin main`                             | `main -> main`                      |
+| `git pull origin main`                             | Downloads latest changes from GitHub                           | `git pull origin main`                             | `Already up to date.`               |
+| `git pull origin main --allow-unrelated-histories` | Merges repos that have different histories                     | `git pull origin main --allow-unrelated-histories` | Merge commit created                |
+| `git log`                                          | Shows full commit history                                      | `git log`                                          | `commit 4321416 Author: Nagesh`     |
+| `git log --oneline`                                | Shows short commit history                                     | `git log --oneline`                                | `4321416 removing empty files`      |
+| `git branch`                                       | Shows current branch                                           | `git branch`                                       | `* main`                            |
+| `git remote -v`                                    | Shows connected GitHub repository                              | `git remote -v`                                    | `origin https://github.com/...`     |
+| `find . -type f -empty`                            | Finds empty files                                              | `find . -type f -empty`                            | `file2.txt file3.txt`               |
+| `find . -type f -empty -delete`                    | Deletes empty files                                            | `find . -type f -empty -delete`                    | *(files removed)*                   |
+| `rm file.txt`                                      | Deletes a specific file                                        | `rm file2.txt`                                     | *(file removed)*                    |
 
